@@ -1,21 +1,47 @@
 {% extends "layouts/main.html" %}
 
-{% block pageTitle %}
-Home – {{serviceName}} – GOV.UK Prototype Kit
-{% endblock %}
-
 {% block content %}
 
 <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <form action="/" method="post" class="form">
+      <nav aria-label="Menu" class="govuk-header__navigation ">
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu" hidden>Menu</button>
+        <ul id="navigation" class="govuk-header__navigation-list">
+          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="/">
+              Q&A
+            </a>
+          </li>
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="#">
+              Documentation
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--l" for="question">
+          LAA digital Q&A
+        </label>
+      </h1>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <input class="govuk-input" id="question" name="question" type="text" placeholder="Type your question here" {% if question %} value="{{ question }}"{% endif %}>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <button class="govuk-button" data-module="govuk-button" onclick="asking()">
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
   <div class="govuk-grid-column-two-thirds">
-
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
-
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+    <div id="blink"> </div>
+    {% if answer %}
+      <div id="answer-text" class="govuk-body">{{ answer | safe }}</div>
+    {% endif %}
   </div>
 </div>
 

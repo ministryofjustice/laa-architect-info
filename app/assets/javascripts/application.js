@@ -6,3 +6,7 @@
 window.GOVUKPrototypeKit.documentReady(() => {
   // Add JavaScript here
 })
+
+function asking() {
+  document.getElementById('blink').style.display = "block";
+}

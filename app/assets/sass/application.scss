@@ -1,6 +1,34 @@
 //
 // For guidance on how to add CSS and SCSS see:
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
-// 
+//
 
-// Add extra styles here
+.govuk-header__navigation-item--active {
+  .govuk-header__link, .govuk-header__link:link, .govuk-header__link:visited {
+    color: #000;
+  }
+}
+
+.govuk-header__link, .govuk-header__link:link, .govuk-header__link:visited {
+  color: #1d8feb;
+}
+
+#blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  background: #000;
+  display: none;
+  width: 10px;
+  height: 20px;
+  margin-bottom: 20px;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}

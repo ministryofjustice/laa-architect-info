@@ -2,11 +2,16 @@
   "scripts": {
     "dev": "govuk-prototype-kit dev",
     "serve": "govuk-prototype-kit serve",
-    "start": "govuk-prototype-kit start"
+    "start": "govuk-prototype-kit start",
+    "prepare-tuning": "node lib/prepare-tuning-data.js",
+    "prepare-embeddings": "node lib/prepare-embeddings.js",
+    "test-prompt": "node lib/prepare-question-prompt.js"
   },
   "dependencies": {
     "@govuk-prototype-kit/common-templates": "^1.0.0",
     "govuk-frontend": "^4.5.0",
-    "govuk-prototype-kit": "^13.3.0"
+    "govuk-prototype-kit": "^13.3.0",
+    "compute-cosine-similarity": "^1.0.0",
+    "openai": "^3.1.0"
   }
 }
