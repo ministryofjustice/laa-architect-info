@@ -26,6 +26,8 @@ spec:
               secretKeyRef:
                 name: basic-auth
                 key: password
+          - name: OPENAI_API_KEY
+            value: ${OPENAI_API_KEY}
         ports:
         - containerPort: 3000
 ---
