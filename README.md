@@ -23,7 +23,7 @@ To start the app:
 
 ### Training data
 
-When a question is submitteqd, the data in `/content` is used as a prompt to help the language model in providing an answer. This allows the model to have LAA Digital contextual awareness and not just general knowledge when responding to questions.
+When a question is submitteqd, the data in `/docs` is used as a prompt to help the language model in providing an answer. This allows the model to have LAA Digital contextual awareness and not just general knowledge when responding to questions.
 
 Important: if you want to update the training data, please note that this repository is public so don't add any sensitive or personal details!
 
@@ -40,7 +40,7 @@ If you like, you can also play with fine-tuning a chatGPT model based on the tra
 You will need Python 3 installed. You will then need to install the openai cli tool.
 - Run `pip install --upgrade openai`
 
-Prepare training data (using the content in `/tuning`):
+Prepare training data (using the content in `/docs`):
 - Run `npm run prepare-tuning` in the project folder to create a file for GPT-3 tuning
 - Run `openai tools fine_tunes.prepare_data -f tuning_data.jsonl` in the project folder to analyse and format the tuning file
 
