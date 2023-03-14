@@ -24,10 +24,10 @@ In addition, LAA digital has a couple of supporting teams:
 - LAA Digital Support
 
 ### What is the strategy of LAA digital?
-The strategy for LAA digital is reflected in the Ministry of Justice Digital strategy for 2022 to 2025 https://www.gov.uk/government/publications/ministry-of-justice-digital-strategy-2025.
+The strategy for LAA digital is reflected in the [Ministry of Justice Digital strategy](https://www.gov.uk/government/publications/ministry-of-justice-digital-strategy-2025) for 2022 to 2025.
 
 ### Acronyms
-Useful acronyms for LAA Digital and MOJ are listed on https://ministry-of-justice-acronyms.service.justice.gov.uk/.
+Useful acronyms for LAA Digital and MOJ are listed on [https://ministry-of-justice-acronyms.service.justice.gov.uk](https://ministry-of-justice-acronyms.service.justice.gov.uk/).
 
 ### More information
 - [About our tech estate](/laa-digital-tech.md)
