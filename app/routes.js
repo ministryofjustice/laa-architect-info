@@ -22,3 +22,10 @@ router.post('/', function (req, res) {
     res.redirect('/?q=' + encodeURI(question))
   }
 });
+
+router.post("/slack/actions", function(req, res, next) {
+    // Get event payload
+    let payload = req.body;
+    let challenge = payload.challenge;
+    res.status(200).send(challenge);
+});
