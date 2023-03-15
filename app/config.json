@@ -1,4 +1,4 @@
 {
   "serviceName": "LAA digital Q&A",
-  "useAuth": false
+  "useAuth": true
 }
