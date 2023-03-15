@@ -1,3 +1,4 @@
 {
-  "serviceName": "LAA digital Q&A"
+  "serviceName": "LAA digital Q&A",
+  "useAuth": false
 }
