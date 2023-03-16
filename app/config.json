@@ -1,4 +1,5 @@
 {
   "serviceName": "LAA digital Q&A",
-  "useAuth": true
+  "useAuth": false,
+  "useAuthExceptSlackAPI": true
 }

@@ -2,6 +2,22 @@ const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 const OpenAI = require('../lib/openai')
 const openai = new OpenAI()
+const govAuth = require('govuk-prototype-kit/lib/authentication.js');
+const config = require('./config.json');
+
+const checkAuthentication = (req, res, next) => {
+  if (req.path.includes('/slack')) {
+    return next();
+  }
+
+  if (config.useAuthExceptSlackAPI) {
+    // govuk kit checks env var, so we can override
+    process.env.USE_AUTH = true;
+    return next();
+  }
+};
+
+router.all('*', checkAuthentication, govAuth());
 
 router.get('/', async (req, res) => {
   let question = req.query && req.query.q
