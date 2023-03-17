@@ -30,16 +30,19 @@ router.post('/', function (req, res) {
 
 router.post("/slack/actions", function(req, res, next) {
     let payload = req.body;
+    console.log('slack event');
 
     // handle challenge
     let challenge = payload.challenge;
     if (challenge) {
+      console.log('slack challenge');
       res.status(200).send(challenge);
       return;
     }
 
     // check token (todo: replace with verifying the request signature)
     if (payload.token !== process.env.SLACK_TOKEN) {
+      console.log('slack token mismatch');
       res.sendStatus(403);
       return;
     }
@@ -55,5 +58,4 @@ router.post("/slack/actions", function(req, res, next) {
       slack(msg);
       return;
     }
-
 });
