@@ -55,7 +55,7 @@ router.post("/slack/actions", function(req, res, next) {
     if (slackEvent.type === "app_mention") {
       let msg = slackEvent.text;
       let channel = slackEvent.channel;
-      slack(msg);
+      slack(msg, channel);
       return;
     }
 });
