@@ -4,6 +4,7 @@ const OpenAI = require('../lib/openai')
 const openai = new OpenAI()
 const customAuth = require('../lib/authentication');
 const config = require('./config.json');
+const slack = require('../lib/slack');
 
 router.all('*', customAuth());
 
@@ -28,8 +29,31 @@ router.post('/', function (req, res) {
 });
 
 router.post("/slack/actions", function(req, res, next) {
-    // Get event payload
     let payload = req.body;
+
+    // handle challenge
     let challenge = payload.challenge;
-    res.status(200).send(challenge);
+    if (challenge) {
+      res.status(200).send(challenge);
+      return;
+    }
+
+    // check token (todo: replace with verifying the request signature)
+    if (payload.token !== process.env.SLACK_TOKEN) {
+      res.sendStatus(403);
+      return;
+    }
+
+    // let slack know event received ok
+    res.sendStatus(200);
+
+    let slackEvent = payload.event;
+    console.log(slackEvent);
+    if (slackEvent.type === "app_mention") {
+      let msg = slackEvent.text;
+      let channel = slackEvent.channel;
+      slack(msg);
+      return;
+    }
+
 });
