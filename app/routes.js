@@ -28,7 +28,7 @@ router.post('/', function (req, res) {
   }
 });
 
-router.post("/slack/actions", function(req, res, next) {
+router.post("/slack/actions", async function(req, res, next) {
     let payload = req.body;
     console.log('slack event');
 
@@ -54,6 +54,9 @@ router.post("/slack/actions", function(req, res, next) {
     console.log(slackEvent);
     if (slackEvent.type === "app_mention") {
       let msg = slackEvent.text;
+      // remove bot user ref
+      msg.replace(/<.*>/, '');
+      msg = await openai.ask(msg);
       let channel = slackEvent.channel;
       slack(msg, channel);
       return;
