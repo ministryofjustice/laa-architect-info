@@ -14,7 +14,8 @@ env:
   KUBE_CLUSTER: ${{ secrets.KUBE_CLUSTER }}
   KUBE_NAMESPACE: ${{ secrets.KUBE_NAMESPACE }}
   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-  SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+  SLACK_API_TOKEN: ${{ secrets.SLACK_TOKEN }}
+  SLACK_VERIFICATION_TOKEN: ${{ secrets.SLACK_VERIFICATION_TOKEN }}
 
 jobs:
   main:

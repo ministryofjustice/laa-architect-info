@@ -41,7 +41,7 @@ router.post("/slack/actions", function(req, res, next) {
     }
 
     // check token (todo: replace with verifying the request signature)
-    if (payload.token !== process.env.SLACK_TOKEN) {
+    if (payload.token !== process.env.SLACK_VERIFICATION_TOKEN) {
       console.log('slack token mismatch');
       res.sendStatus(403);
       return;

@@ -28,8 +28,10 @@ spec:
                 key: password
           - name: OPENAI_API_KEY
             value: ${OPENAI_API_KEY}
-          - name: SLACK_TOKEN
-            value: ${SLACK_TOKEN}
+          - name: SLACK_API_TOKEN
+            value: ${SLACK_API_TOKEN}
+          - name: SLACK_VERIFICATION_TOKEN
+            value: ${SLACK_VERIFICATION_TOKEN}
         ports:
         - containerPort: 3000
 ---
