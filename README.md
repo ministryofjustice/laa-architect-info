@@ -54,3 +54,10 @@ Test model:
 
 Update app to use the new model:
 - Set 'model' to the name of the new model in `config.js`
+
+### Slack integration
+
+The app provides handling for a Slack response bot.
+- Create a Slack APP in your workspace, with events set to post to [URL-to-your-site]/slack/actions
+- Set the Bot User OAuth Token as `SLACK_API_KEY` environment variable
+- Set the Verification Token as `SLACK_VERIFICATION_KEY` environment variable
