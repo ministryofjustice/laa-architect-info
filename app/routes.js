@@ -70,9 +70,9 @@ router.post("/slack/actions", async function(req, res, next) {
     if (slackEvent.type === "app_mention") {
       let msg = slackEvent.text;
       // remove bot user ref
-      msg.replace(/<.*>/, '');
+      msg = msg.replace(/<.*>/, '');
       msg = await openai.ask(msg);
-      msg.replace('<br>', '\n');
+      msg = msg.replaceAll('<br>', '\n');
       let channel = slackEvent.channel;
       slack(msg, channel);
       return;
