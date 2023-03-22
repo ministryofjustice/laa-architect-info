@@ -1,12 +1,14 @@
 # Prototype LAA architecture chat
-Language model training for LAA architecture documentation. Includes a Q&A demo that uses the Open AI API.
+LAA architecture documentation. Includes:
+- a Q&A demo that uses the Open AI API
+- documentation pages
 
 # Install
 To install the app:
 - Download or clone the repository
 - Run `npm install` in the project folder to install all modules and their dependencies
 
-# Usage
+# Local usage
 
 ### Set API key
 
@@ -20,16 +22,24 @@ To start the app:
 - Run `npm start` in the project folder to start the app
 - Visit http://localhost:3000
 - Submit a question and get a response.
+- Visit http://localhost:3000/docs to view docs.
 
 ### Training data
 
-When a question is submitteqd, the data in `/docs` is used as a prompt to help the language model in providing an answer. This allows the model to have LAA Digital contextual awareness and not just general knowledge when responding to questions.
+When a Q&A question is submitted, the data in `/docs` is used as a prompt to help the language model in providing an answer. This allows the model to have LAA Digital contextual awareness and not just general knowledge when responding.
 
 Important: if you want to update the training data, please note that this repository is public so don't add any sensitive or personal details!
 
-Once you have updated the content of the data, you will need to generate 'embedding' vectors that represent the semantic meaning of the content.
+To add or update content:
+- Either create a new markdown file in `/docs` or update an existing file
+- Use a meaningful name for the file and save as `.md`
+- The content should be in the format of questions and answers:
+  - Each question should be prefixed with '###' and end with a '?'
+  - Each answer should follow the question and not contain either '###' or '?' characters
+
+Once you have added or updated the content, you will need to generate 'embedding' vectors that represent the semantic meaning of the content.
 - Run `npm run prepare-embeddings` in the project folder to start the app
-- This will generate embeddings for each of the content files and save them to `embeddings.json`. The script may take a few minutes to complete, since we need to respect rate limits with the Open AI API.
+- This will generate embeddings for each of the content files and save them to `embeddings.json`. The script may take a few minutes to complete, since we need to respect rate limits with the Open AI API. A `questions.json` file will also be created to map the embedding vectors to their original questions.
 
 When you next enter a question, the embeddings file will be searched for semantically similar content to the question. The most similar snippets will be sent to the Open AI language model as a contextual prompt together with the question.
 
