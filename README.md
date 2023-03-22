@@ -1,7 +1,7 @@
-# Prototype LAA architecture chat
-LAA architecture documentation. Includes:
-- a Q&A demo that uses the Open AI API
-- documentation pages
+# LAA architecture docs (prototype)
+A prototype that provides:
+- a site for LAA architecture documentation
+- a Q&A for that documentation powered by the Open AI API
 
 # Install
 To install the app:
