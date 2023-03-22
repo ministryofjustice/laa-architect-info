@@ -2,7 +2,7 @@
 LAA Portal (also known as the LAA Online Portal, and just Portal) is used to authenticate users to LAA web services. Users, both internal and external, login to the LAA Portal and are presented with a list of services they can access.
 
 ### What relationships does LAA Portal have to other software systems?
-Many LAA Digital systems integrate with Portal in order to authenticate users of their service:
+Many LAA Digital systems use LAA Portal in order to authenticate users of their service, including:
 - CCMS PUI
 - CCMS EBS
 - Civil Apply
