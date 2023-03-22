@@ -30,8 +30,8 @@ The strategy for LAA digital is reflected in the [Ministry of Justice Digital st
 Useful acronyms for LAA Digital and MOJ are listed on [https://ministry-of-justice-acronyms.service.justice.gov.uk](https://ministry-of-justice-acronyms.service.justice.gov.uk/).
 
 ### More information
-- [About our tech estate](/laa-digital-tech.md)
-- [Our hosting platforms](/hosting.md)
-- [Domain model](/domains.md)
-- [Identity and user management](/identity.md)
+- [About our tech estate](/docs/laa-digital-tech)
+- [Our hosting platforms](/docs/hosting)
+- [Domain model](/docs/domains)
+- [Identity and user management](/docs/identity)
 - [Service standard](https://www.gov.uk/service-manual/service-standard)

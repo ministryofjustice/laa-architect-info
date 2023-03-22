@@ -1,0 +1,16 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds doc-content-block">
+      {% for content in contentBlocks %}
+        <h3 class="govuk-heading-m">{{ content.question }}?</h3>
+        <p class="govuk-body">{{ content.answer | safe }}</p>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

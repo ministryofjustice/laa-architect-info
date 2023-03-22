@@ -37,7 +37,7 @@ On a day to day basis, teams should think about:
 Teams should treat these things as first-class priorities and expect to spend more time on them than normal, even if it means slowing down on other priorities in the short-term.
 
 In terms of planning and strategy:
-- When building new services, think beyond the horizons of the initial MVP - which components of older systems might we be able to turn off, how might the transition be handled?
+- When building new services, think beyond the horizons of the initial MVP - which components of older systems might we be able to turn off, how might the transition be handled
 - When prioritising, see decommissioning as a high-value achievement in its own right and a cause for celebration.
 - Look for opportunities to buy instead of build (to limit the code we own) but avoiding the Fake COTS trap (buying but then needing to heavily customise)
 - Look for opportunities to reuse software where possible (to limit the code we own) but favouring duplication over reuse if it makes things easier to manage

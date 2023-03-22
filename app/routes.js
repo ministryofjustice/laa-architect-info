@@ -5,6 +5,13 @@ const openai = new OpenAI()
 const customAuth = require('../lib/authentication');
 const config = require('./config.json');
 const slack = require('../lib/slack');
+const fs = require('fs');
+const path = require('path');
+const mdConverter = require('markdown-it')();
+let docPages = {};
+(async () => {
+  docPages = await require('../lib/doc-pages')()
+})();
 
 router.all('*', customAuth());
 
@@ -18,7 +25,7 @@ router.get('/', async (req, res) => {
     res.locals.answer = await openai.ask(input)
   }
 
-  res.render('index')
+  res.render('index', { qa: true })
 });
 
 router.post('/', function (req, res) {
@@ -27,6 +34,15 @@ router.post('/', function (req, res) {
     res.redirect('/?q=' + encodeURI(question))
   }
 });
+
+router.get('/docs/:item', function (req, res) {
+  let item = req.params && req.params.item;
+  if (docPages[item]) {
+    res.render('docs-content', { contentBlocks: docPages[item] });
+  } else {
+    res.render('docs');
+  }
+})
 
 router.post("/slack/actions", async function(req, res, next) {
     let payload = req.body;
