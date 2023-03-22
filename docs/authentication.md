@@ -11,7 +11,7 @@ External users of LAA Digital systems include:
 - Members of the public who search for legal providers and submit information when applying for legal aid
 
 ### How do LAA Digital systems authenticate users?
-Currently most LAA Digital services use the [LAA Portal](/laa-portal.md) to authenticate both internal and externals users. However, some systems have implemented their own identity solutions instead. Going forward, new services are encouraged to use LAA Portal for authenticating external users and use the MOJ AzureAd instance for authenticating internal users.
+Currently most LAA Digital services use the [LAA Portal](/docs/laa-portal) to authenticate both internal and externals users. However, some systems have implemented their own identity solutions instead. Going forward, new services are encouraged to use LAA Portal for authenticating external users and use the MOJ AzureAd instance for authenticating internal users.
 
 ### Why use LAA Portal for external users?
 - LAA Portal provides a unified front door to LAA services for providers.

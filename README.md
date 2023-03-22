@@ -29,7 +29,7 @@ Important: if you want to update the training data, please note that this reposi
 
 Once you have updated the content of the data, you will need to generate 'embedding' vectors that represent the semantic meaning of the content.
 - Run `npm run prepare-embeddings` in the project folder to start the app
-- This will use the Open AI API to regenerate embeddings for each of the content files and save them to `embeddings.json`
+- This will generate embeddings for each of the content files and save them to `embeddings.json`. The script may take a few minutes to complete, since we need to respect rate limits with the Open AI API.
 
 When you next enter a question, the embeddings file will be searched for semantically similar content to the question. The most similar snippets will be sent to the Open AI language model as a contextual prompt together with the question.
 

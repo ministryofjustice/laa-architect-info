@@ -1,0 +1,80 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+  {% include "layouts/header.html" %}
+  <header class="homepage-inverse-header">
+    <div class="govuk-width-container">
+      <h1 class="homepage-inverse-header__title">
+        Documentation
+      </h1>
+      <p class="homepage-inverse-header__intro">This guide provides information on LAA Digital software.</p>
+      <p class="homepage-inverse-header__intro">It has a technical focus but includes non-technical info about our products too.</p>
+    </div>
+  </header>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+    <h1 class="govuk-heading-l">Topics</h1>
+  </div>
+</div>
+
+<div class="govuk-width-container govuk-grid-row">
+  <div class="govuk-grid-column-one-third doc-content-box-wrapper">
+    <div class="doc-content-box">
+      <h4 class="govuk-heading-s">General</h4>
+      <p class="govuk-body"><a href="/docs/authentication">Authentication</a>,
+         <a href="/docs/domains">Domains</a>,
+         <a href="/docs/hosting">Hosting</a>,
+         <a href="/docs/laa-digital-tech">LAA Digital tech</a>, 
+         <a href="/docs/laa-digital">LAA Digital</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third doc-content-box-wrapper">
+    <div class="doc-content-box">
+      <h4 class="govuk-heading-s">Criminal legal aid</h4>
+      <p class="govuk-body"><a href="/docs/maat">MAAT</a>,
+         <a href="/docs/maat-api">MAAT API</a>,
+         <a href="/docs/mlra">MLRA</a>,
+         <a href="/docs/eforms">Eforms</a>,
+         <a href="/docs/infox">InfoX</a>,
+         <a href="/docs/nolasa">NoLASA</a>,
+         <a href="/docs/court-data-adaptor">Court Data Adaptor</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third doc-content-box-wrapper">
+    <div class="doc-content-box">
+      <h4 class="govuk-heading-s">Court systems</h4>
+      <p class="govuk-body"><a href="/docs/xhibit">Xhibit</a>,
+         <a href="/docs/libra">Libra</a>,
+         <a href="/docs/common-platform">Common Platform</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-width-container govuk-grid-row">
+  <div class="govuk-grid-column-one-third doc-content-box-wrapper">
+    <div class="doc-content-box">
+      <h4 class="govuk-heading-s">Identity</h4>
+      <p class="govuk-body">
+        <a href="/docs/laa-portal">LAA Portal</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third doc-content-box-wrapper">
+    <div class="doc-content-box">
+      <h4 class="govuk-heading-s">Data sharing</h4>
+      <p class="govuk-body">
+        <a href="/docs/benefit-checker">DWP Benefit Checker</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
