@@ -4,8 +4,7 @@
     "serve": "govuk-prototype-kit serve",
     "start": "govuk-prototype-kit start",
     "prepare-tuning": "node lib/prepare-tuning-data.js",
-    "prepare-embeddings": "node lib/prepare-embeddings.js",
-    "test-prompt": "node lib/prepare-question-prompt.js"
+    "prepare-embeddings": "node lib/prepare-embeddings.js"
   },
   "dependencies": {
     "@govuk-prototype-kit/common-templates": "^1.0.0",
