@@ -4,6 +4,7 @@ EForms is a set of web forms used to apply for criminal legal aid. EForms is als
 ### What relationships does EForms have to LAA digital systems?
 - eForms writes to MAAT via LAA Hub jobs to submit criminal legal aid applications
 - eForms calls to LAA Portal to authenticate users
+- eForms calls to the Benefit Checker to check the benefits entitlement status of applicants
 - MAAT writes to EForms via LAA Hub jobs to send legal aid decisions and status updates.
 - CWA writes to eForms via LAA Hub jobs to send data about legal aid providers.
 

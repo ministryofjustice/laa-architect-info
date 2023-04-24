@@ -60,3 +60,12 @@ The nature and condition of these systems varies. One significant factor is whet
 - LAA digital has entered a ‘transitional state’, during which its technical estate will grow before it can be streamlined back down. This is because LAA digital's biggest legacy systems were not designed in a way that allows specific components to be isolated and turned off as new services come along.
 - During this period, many legacy systems will continue to be critical to the functioning of legal aid and will need to be appropriately modernised so that they remain operational, secure, and updated in line with legal aid policy changes. This modernisation process will continue to be challenging.
 - LAA digital is designing more resilient and adaptable systems in order to help achieve the goal of creating 'simplified and more reliable access to legal aid services'. LAA Digital teams are also working to make sure that systems surface the right data to help drive decisions around simplification and automation.
+
+### How many applications for legal aid are there every year?
+In total there are around 1 million applications for legal aid in the UK each year. This breaks down into different types of legal aid:
+- Crime lower (work in magistrates courts and police custody): https://data.justice.gov.uk/legalaid/legal-aid-crime-lower
+- Crime higher (legal representation in the Crown Court and above): https://data.justice.gov.uk/legalaid/legal-aid-crime-higher
+- Civil help (civil legal services which includes advice and assistance about a legal problem): https://data.justice.gov.uk/legalaid/legal-aid-help-controlled-representation
+- Civil representation (legal representation in Civil courts): https://data.justice.gov.uk/legalaid/legal-aid-civil-representation
+- Family mediation: https://data.justice.gov.uk/legalaid/legal-aid-mediation
+- Exceptional cases: https://data.justice.gov.uk/legalaid/legal-aid-ecf
