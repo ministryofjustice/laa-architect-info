@@ -51,7 +51,7 @@ router.post("/slack/actions", async function(req, res, next) {
     // handle challenge
     let challenge = payload.challenge;
     if (challenge) {
-      console.log('slack challenge');
+      challenge = escape(challenge)
       res.status(200).send(challenge);
       return;
     }
