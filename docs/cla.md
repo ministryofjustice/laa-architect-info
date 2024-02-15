@@ -1,5 +1,5 @@
 ### What is CLA?
-CLA stands for Civil Legal Advice. CLA is a service provided to the general public in England and Wales where users can obtain free legal advice from specialist legal providers relating to a range of Civil matters. This is subject to the user’s matter being within scope of the service and the user passing the means eligibility test. The advice can either be given via telephone or in person depending upon the client’s unique circumstances. LAA Digital provides software services to support the provision of CLA.
+CLA stands for Civil Legal Advice. CLA is a service provided to the general public in England and Wales where users can obtain free legal advice from specialist legal providers relating to a range of Civil matters. This is subject to the user’s matter being within scope of the service and the user passing the means eligibility test. The advice can either be given via telephone or in person depending upon the client’s unique circumstances. LAA Digital provides software services to support the provision of CLA, including the "Check if you can get legal aid" web service.
 
 ### What relationships does CLA have to LAA digital systems?
 - CLA calls to LAALAA finds out which legal providers are near the user
@@ -16,7 +16,7 @@ CLA is maintained by the CLA team in LAA Digital.
 
 ### What type of software is CLA?
 CLA software applications include:
-- CLA Public: a public web service built using Flask which allows citizens to check if they are eligible for legal aid
+- CLA Public: a public web service called "Check if you can get legal aid" built using Flask, which allows citizens to check if they are likely to be eligible for civil legal aid, including Legal Help from CLA's specialist legal providers. If they are eligible then they are referred to the "Civil Legal Advice service", where they speak to a specialist legal provider over the phone to receive free legal advice. If they are not eligible for legal help from Civil Legal Advice, they are directed to other options, including legal providers near the user.
 - CLA Frontend: a Django web application for managing civil legal aid applications and callbacks
 - CLA Backend API: an API for managing civil legal aid cases, backed by a Postgres database
 - CLA MI: an Oracle APEX application to process the information from CLA Backend into TAD
